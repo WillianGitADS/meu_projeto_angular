@@ -1,0 +1,35 @@
+<h2>Interpolation</h2>
+<p>{{ nome }} tem {{ idade }} anos.</p>
+<p>{{ nome }} tem mais de 28 anos?</p>
+<P>{{ idade > 28 }}</P>
+<p> Quanto é {{ idade }} + 1?</p>
+<p>{{ idade + 1}}</p>
+
+<hr>
+
+<h2>Property bind</h2>
+
+<button [disabled]="checkedDisabled">Botão</button>
+
+<img [src]="imgsrc" [alt]="imgtitle" width="50%">
+<br>
+<br>
+<hr>
+<h2>Event Binding</h2>
+
+<button (click)="AlertaInfo()">Evento</button>
+<br>
+<button (click)="PegaValor('valor enviado')">EventoPegaValor</button>
+<br>
+<button (click)="Evento($event)">Event</button>
+<br><br>
+<div (mousemove)="MouseMoveTeste($event)" style= "background: red; width: 150px; height: 150px"></div>
+<br>
+{{position.x}} - {{position.y}}
+<br>
+<hr>
+<h2>Two-way Binding</h2>
+<input [(ngModel)]="nome"> {{nome}}
+<br>
+<input [(ngModel)]="idade"> {{idade}}
+<br>
